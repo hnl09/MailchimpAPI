@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt_br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Boostrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css">
     <title>Newsletter</title>
 </head>
-<body>
-    
 
-<script src="./script.js"></script>
+<body class="text-center">
+    <form class="form-signin">
+        <img class="mb-4 icon-img" src="./img/icon.jpg" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Inscreva-se na minha newsletter!</h1>
+        <input type="text" class="form-control top" placeholder="Primeiro Nome" required autofocus>
+        <input type="text" class="form-control middle" placeholder="Ultimo Nome" required>
+        <input type="email" class="form-control bottom" placeholder="Email" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Inscrever</button>
+        <p class="mt-5 mb-3 text-muted">&copy; Naylor</p>
+    </form>
 </body>
+
 </html>

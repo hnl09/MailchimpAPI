@@ -1,3 +1,4 @@
+const { response } = require('express')
 const express = require('express')
 const https = require('https')
 const DotEnv = require('dotenv').config()
@@ -36,15 +37,23 @@ const jsonData = JSON.stringify(data)
         auth: `naylor:${process.env.MAILCHIMP_API_KEY}`
     }
 
- const request = https.request(url, options,(res) => {
-    response.on('data', (data) => {
-        console.log(JSON.parse(data))
-    })
+ const request = https.request(url, options,(response) => {
+
+    if (response.statusCode === 200) {
+        res.sendFile(__dirname + "/public/sucess.html")
+    } else {
+        res.sendFile(__dirname + "/public/failure.html")
+    }
+
  })
 
 request.write(jsonData)
 request.end()
 
+})
+
+app.post('/failure', function(req, res) {
+    res.redirect("/")
 })
 
 app.listen(port, () => {

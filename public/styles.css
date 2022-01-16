@@ -62,3 +62,7 @@ body {
 .icon-img {
     border-radius: 25%;
 }
+
+.jumbotron {
+    background: rgba(204, 204, 204, 0.1);
+}
